@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Raleway } from "next/font/google";
 const raleway = Raleway({ weight: "500", subsets: ["latin"] });
 
-export default function Home() {
+export default function header() {
     return (
         <>
             <Head>
@@ -14,7 +14,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className={raleway.className}>
+            <div style={{backgroundColor: "#212526"}} className={raleway.className}>
                 <header className={styles['header']}>
                     <nav className={styles['nav']}>
                         <img src="./logo.png" />
@@ -26,7 +26,7 @@ export default function Home() {
                         <div className={styles['header-buttons']}>
                             <Link className={styles['links']} href='#'><img src="./heart.png" /></Link>
                             <Link className={styles['links']} href='#'><img src="./statistic.png" /></Link>
-                            <Link className={styles['links']} href='#'><img src="./user.png" /></Link>
+                            <Link className={styles['links']} href='/sign-in'><img src="./user.png" /></Link>
                             <Link className={styles['links']} href='#'><img src="./shopping-cart.png" /></Link>
                             <div className={styles['summa']}>
                                 <p className={styles['timeP']}>Товаров на сумму</p>
